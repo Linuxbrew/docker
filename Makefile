@@ -1,5 +1,7 @@
 travis:
 	cd travis && docker build -t linuxbrew/travis .
 
-.PHONY: travis
+ubuntu:
+	cd ubuntu && docker build -t linuxbrew/ubuntu .
 
+.PHONY: travis ubuntu
