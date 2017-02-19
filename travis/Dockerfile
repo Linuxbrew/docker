@@ -1,7 +1,29 @@
 FROM quay.io/travisci/travis-ruby
 MAINTAINER Bob W. Hogg <rwhogg@linux.com>
 
-RUN sudo apt-get -qq update && sudo apt-get install -y libxml-parser-perl libxml-sax-perl libcpan-meta-perl && sudo apt-get remove -y libncurses5-dev libtinfo-dev
+RUN sudo apt-get -qq update &&\
+    sudo apt-get install -y libxml-parser-perl libxml-sax-perl &&\
+    env DEBIAN_FRONTEND=noninteractive sudo apt-get autoremove -y --purge\
+      libblas-dev\
+      libbz2-dev\
+      libfreetype6-dev\
+      libgdbm-dev\
+      libicu-dev\
+      libidn11-dev\
+      libjasper-dev\
+      libjbig-dev\
+      libkrb5-dev\
+      liblzma-dev\
+      libncurses5-dev\
+      libpcre3-dev\
+      libtinfo-dev\
+      libwebp-dev\
+      libwmf-dev\
+      libx11-dev\
+      libxml2-dev\
+      llvm-3.4\
+      mysql-common\
+      zlib1g-dev
 
 # Get to the right place
 RUN useradd -ms /bin/bash linuxbrew
