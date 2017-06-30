@@ -9,12 +9,11 @@ RUN apt-get update \
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8 \
 	&& useradd -m -s /bin/bash linuxbrew \
 	&& echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
-RUN git clone https://github.com/Linuxbrew/brew.git /home/linuxbrew/.linuxbrew \
-    && chown -R linuxbrew: /home/linuxbrew/.linuxbrew \
-	&& cd /home/linuxbrew/.linuxbrew \
-	&& git remote set-url origin https://github.com/Linuxbrew/brew.git
 
 USER linuxbrew
 WORKDIR /home/linuxbrew
+
+RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
+
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 	SHELL=/bin/bash
