@@ -22,6 +22,6 @@ WORKDIR /home/linuxbrew
 
 RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
 
-ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
-	SHELL=/bin/bash
+ENV PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+RUN echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.bash_profile
 RUN brew install ruby
