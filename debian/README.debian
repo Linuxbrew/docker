@@ -1,0 +1,11 @@
+Run the machine with:
+```
+docker run -d linuxbrew/debian tail -f /dev/null
+```
+
+Use docker-enter to shell into it:
+```
+docker-enter() { boot2docker ssh -t "[ -f /var/lib/boot2docker/nsenter ] || docker run --rm -v /var/lib/boot2docker/:/target jpetazzo/nsenter; sudo /var/lib/boot2docker/docker-enter $@"; }
+
+docker-enter <container>
+```
