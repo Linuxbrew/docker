@@ -23,5 +23,5 @@ WORKDIR /home/linuxbrew
 RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
 
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
-RUN echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.bash_profile
+RUN echo 'export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH TERM=xterm' >>~/.bash_profile
 RUN brew install ruby
