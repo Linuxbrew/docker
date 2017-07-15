@@ -1,7 +1,5 @@
 # Build image
 
-```
-
 To build the image, run:
 ```
 make debian
