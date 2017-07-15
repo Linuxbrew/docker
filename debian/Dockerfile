@@ -25,3 +25,4 @@ RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
 
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 	SHELL=/bin/bash
+RUN brew install ruby
