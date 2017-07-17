@@ -1,5 +1,5 @@
 FROM debian:stretch
-MAINTAINER Shaun Jackman <sjackman@gmail.com>
+LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 
 # Set apt in non-interactive mode during the image build
 ARG DEBIAN_FRONTEND=noninteractive
