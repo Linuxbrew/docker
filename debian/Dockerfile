@@ -18,9 +18,6 @@ ENV LANG en_US.UTF-8
 # Install minimal debian packages listed in Linuxbrew documentation
 RUN apt-get install -y build-essential curl file git python-setuptools ruby
 
-# Install basic tools from debian packages
-RUN apt-get install -y sudo man vim htop
-
 # Create a linuxbrew user
 RUN  useradd -m -s /bin/bash linuxbrew \
      && echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
