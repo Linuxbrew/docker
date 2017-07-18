@@ -35,7 +35,7 @@ RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
 ENV PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
 ENV HOMEBREW_DEVELOPER=1 HOMEBREW_NO_AUTO_UPDATE=1
 RUN ulimit -n 1024
-RUN brew tap homebrew/dupes && brew tap linuxbrew/xorg
+RUN brew tap linuxbrew/xorg
 WORKDIR /home/linuxbrew/.linuxbrew/Library/Taps/homebrew/homebrew-core/Formula
 
 # Fix error: Incorrect file permissions (664)
