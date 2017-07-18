@@ -20,7 +20,6 @@ RUN apt-get install -y build-essential curl file git python-setuptools ruby
 RUN  useradd -m -s /bin/bash linuxbrew \
      && echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
 USER linuxbrew
-RUN echo 'export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH TERM=xterm' >>~/.bash_profile
 WORKDIR /home/linuxbrew
 
 # Install Linuxbrew from github
