@@ -1,5 +1,5 @@
 FROM quay.io/travisci/travis-ruby
-MAINTAINER Bob W. Hogg <rwhogg@linux.com>
+LABEL maintainer="Bob W. Hogg <rwhogg@linux.com>"
 
 RUN sudo apt-get -qq update &&\
     sudo apt-get install -y libxml-parser-perl libxml-sax-perl &&\
