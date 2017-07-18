@@ -1,8 +1,8 @@
 FROM ubuntu:xenial
-MAINTAINER Shaun Jackman <sjackman@gmail.com>
+LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 
 RUN apt-get update \
-	&& apt-get install -y curl file g++ git make ruby2.3 ruby2.3-dev uuid-runtime \
+	&& apt-get install -y curl file g++ git locales make ruby2.3 ruby2.3-dev uuid-runtime \
 	&& ln -sf ruby2.3 /usr/bin/ruby \
 	&& ln -sf gem2.3 /usr/bin/gem
 
