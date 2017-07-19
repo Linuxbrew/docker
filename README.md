@@ -4,6 +4,7 @@ Dockerfiles for using Linuxbrew on various distributions
 
 ## Currently Available Base Images
 
+* Debian
 * Travis CI
 * Ubuntu 16.04
 
@@ -11,5 +12,4 @@ Dockerfiles for using Linuxbrew on various distributions
 
 * Alpine
 * CentOS
-* Debian
 * ARM on QEMU
