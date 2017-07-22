@@ -8,6 +8,6 @@ before_install:
   - npm install -g dockerfilelint
 
 script:
-  - dockerfilelint */Docker
+  - find . -name Dockerfile | xargs dockerfilelint
   - for dockerDir in *; do make $dockerDir; done
 
