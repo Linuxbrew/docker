@@ -63,4 +63,4 @@ RUN brew tap homebrew/science
 RUN brew tap linuxbrew/xorg
 WORKDIR /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula
 # Fix error: Incorrect file permissions (664)
-#RUN chmod 0644 /home/linuxbrew/.linuxbrew/Library/Taps/homebrew/homebrew-core/Formula/*.rb
+RUN chmod 0644 *.rb
