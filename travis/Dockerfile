@@ -1,9 +1,9 @@
 FROM quay.io/travisci/travis-ruby
 LABEL maintainer="Bob W. Hogg <rwhogg@linux.com>"
 
-RUN sudo apt-get -qq update &&\
-    sudo apt-get install -y libc6-dbg libxml-parser-perl libxml-sax-perl &&\
-    env DEBIAN_FRONTEND=noninteractive sudo apt-get autoremove -y --purge\
+RUN apt-get -qq update &&\
+    apt-get install -y libc6-dbg libxml-parser-perl libxml-sax-perl &&\
+    env DEBIAN_FRONTEND=noninteractive apt-get autoremove -y --purge\
       libblas-dev\
       libbz2-dev\
       libexpat1-dev\
