@@ -5,6 +5,7 @@ Dockerfiles for using Linuxbrew on various distributions
 ## Currently Available Base Images
 
 * Debian
+* Fedora
 * Travis CI
 * Ubuntu 16.04
 
