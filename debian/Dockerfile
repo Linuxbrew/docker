@@ -13,7 +13,7 @@ RUN apt-get update && \
 ENV LANG en_US.UTF-8
 
 # Install minimal debian packages listed in Linuxbrew documentation
-RUN apt-get install -y build-essential curl file git python-setuptools ruby
+RUN apt-get install -y build-essential curl file git python-setuptools
 
 # Create a linuxbrew user
 RUN  useradd -m -s /bin/bash linuxbrew \
@@ -25,3 +25,6 @@ ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 
 # Install Linuxbrew from github
 RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
+
+# Install portable-ruby by running brew a first time
+RUN brew list
