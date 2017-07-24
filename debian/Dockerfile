@@ -26,5 +26,5 @@ ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 # Install Linuxbrew from github
 RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
 
-# Install portable-ruby by running brew a first time
-RUN brew list
+# Install portable-ruby by running brew for the first time
+RUN brew doctor
