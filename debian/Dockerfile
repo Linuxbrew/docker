@@ -25,6 +25,3 @@ ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 
 # Install Linuxbrew from github
 RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
-
-# Install ruby from Linuxbrew
-RUN brew install ruby
