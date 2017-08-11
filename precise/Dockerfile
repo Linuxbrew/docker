@@ -2,7 +2,7 @@ FROM ubuntu:precise
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 
 RUN apt-get update \
-	&& apt-get install -y curl file g++ git make uuid-runtime \
+	&& apt-get install -y curl file g++ gawk git make sudo uuid-runtime \
 	&& localedef -i en_US -f UTF-8 en_US.UTF-8 \
 	&& useradd -m -s /bin/bash linuxbrew \
 	&& echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
