@@ -6,7 +6,9 @@ Dockerfiles for using Linuxbrew on various distributions
 
 * Debian
 * Travis CI
-* Ubuntu 16.04
+* Ubuntu 12.04 LTS (Precise Pangolin)
+* Ubuntu 14.04 LTS (Trusty Tahr)
+* Ubuntu 16.04 LTS (Xenial Xerus)
 
 ## Planned
 
