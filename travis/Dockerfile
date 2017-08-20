@@ -22,6 +22,7 @@ RUN apt-get -qq update &&\
       libjack0\
       libjasper-dev\
       libjbig-dev\
+      libjpeg8-dev\
       libkrb5-dev\
       libldap2-dev\
       libltdl-dev\
