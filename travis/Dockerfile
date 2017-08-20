@@ -1,4 +1,4 @@
-FROM quay.io/travisci/travis-ruby
+FROM quay.io/travisci/travis-ruby:latest
 LABEL maintainer="Bob W. Hogg <rwhogg@linux.com>"
 
 RUN apt-get -qq update &&\
