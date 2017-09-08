@@ -1,0 +1,8 @@
+*
+!bin
+!cache
+!etc
+!lib
+!lib64
+!linuxbrew
+!usr
