@@ -1,0 +1,28 @@
+FROM scratch
+LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
+
+ENV HOME=/home/linuxbrew LD_LIBRARY_PATH=/lib PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/bin
+
+ADD linuxbrew $HOME/.linuxbrew
+ADD cache $HOME/.cache/Homebrew
+ADD etc/passwd etc/
+ADD bin /bin/
+ADD lib /lib/
+ADD lib64 /lib64/
+ADD usr /usr/
+ADD cache/portable-ruby-2.0.0-p648.x86_64_linux.bottle.tar.gz $HOME/.linuxbrew/Homebrew/Library/Homebrew/vendor/
+
+RUN mkdir -m777 /var && mkdir -m1777 /tmp /var/tmp && chown -R 1000:1000 /bin /etc /lib /lib64 /home /usr /var
+
+USER linuxbrew
+RUN brew link libmagic \
+	&& HOMEBREW_NO_AUTO_UPDATE=1 brew install glibc curl bash coreutils file-formula gawk gnu-tar gzip \
+	&& ln -s bash ~/.linuxbrew/bin/sh \
+	&& printf '#!/bin/sh\ntype -P "$@"\n' >~/.linuxbrew/bin/which && chmod +x ~/.linuxbrew/bin/which
+
+USER root
+RUN rm -rf /bin /lib && ln -s ~/.linuxbrew/bin /bin && ln -s ~/.linuxbrew/lib /lib
+
+USER linuxbrew
+WORKDIR $HOME
+ENTRYPOINT ["/bin/sh"]
