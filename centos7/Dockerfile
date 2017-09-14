@@ -1,7 +1,7 @@
 FROM centos:7
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 
-RUN yum install -y curl c++ make ruby sudo which
+RUN yum install -y curl make ruby sudo which
 
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8 \
 	&& useradd -m -s /bin/bash linuxbrew \
