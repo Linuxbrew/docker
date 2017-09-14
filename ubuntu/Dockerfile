@@ -13,6 +13,9 @@ WORKDIR /home/linuxbrew
 
 RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
 
+RUN git config --global user.name "Linuxbrew User" &&\
+    git config --global user.email "linuxbrew@linuxbrew.sh"
+
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 	SHELL=/bin/bash
 
