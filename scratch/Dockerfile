@@ -25,4 +25,4 @@ RUN rm -rf /bin /lib && ln -s ~/.linuxbrew/bin /bin && ln -s ~/.linuxbrew/lib /l
 
 USER linuxbrew
 WORKDIR $HOME
-ENTRYPOINT ["/bin/sh"]
+CMD ["/bin/bash"]
