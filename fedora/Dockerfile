@@ -1,21 +1,18 @@
-FROM fedora:rawhide
-MAINTAINER Bob W. Hogg <rwhogg@linux.com>
+FROM fedora:26
+LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 
-RUN dnf -y update && \
-    dnf -y groupinstall 'Development Tools' &&\
-    dnf -y install curl file git irb python-setuptools which
-
-RUN dnf -y install glibc-locale-source &&\
-    localedef -i en_US -f UTF-8 en_US.UTF-8 &&\
-    useradd -m -s /bin/bash linuxbrew &&\
-    echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
+RUN dnf install -y curl git glibc-locale-source make ruby rubygem-json rubygem-test-unit sudo which \
+	&& localedef -i en_US -f UTF-8 en_US.UTF-8 \
+	&& useradd -m -s /bin/bash linuxbrew \
+	&& echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
 
 USER linuxbrew
 WORKDIR /home/linuxbrew
-
-RUN git clone https://github.com/Linuxbrew/brew.git .linuxbrew
-
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
-	SHELL=/bin/bash
+	SHELL=/bin/bash \
+	USER=linuxbrew
 
-RUN brew doctor
+RUN yes | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)" \
+	&& brew config
+
+CMD ["/bin/bash"]

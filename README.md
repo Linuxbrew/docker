@@ -24,7 +24,7 @@ Dockerfiles for using Linuxbrew on various distributions of Linux.
   ```sh
   docker run -it linuxbrew/debian
   ```
-+ Fedora (Rawhide)
++ Fedora 26
   ```sh
   docker build -t linuxbrew-fedora https://raw.githubusercontent.com/Linuxbrew/docker/master/fedora/
   ```
