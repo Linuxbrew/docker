@@ -16,4 +16,4 @@ RUN ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/ma
 	&& brew install --ignore-dependencies patchelf glibc \
 	&& brew config
 
-ENTRYPOINT ["/bin/bash"]
+CMD ["/bin/bash"]
