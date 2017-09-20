@@ -4,6 +4,10 @@ Dockerfiles for using Linuxbrew on various distributions of Linux.
 
 # Base Images
 
++ Alpine 6
+  ```sh
+  docker run -it linuxbrew/alpine
+  ```
 + CentOS 5
 + CentOS 6
 + CentOS 7
