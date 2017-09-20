@@ -13,7 +13,7 @@ ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 	USER=linuxbrew
 
 RUN ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)" \
-	&& brew install --ignore-dependencies patchelf glibc \
-	&& brew config
+	&& HOMEBREW_NO_ANALYTICS=1 brew install --ignore-dependencies patchelf glibc \
+	&& HOMEBREW_NO_ANALYTICS=1 brew config
 
 CMD ["/bin/bash"]
