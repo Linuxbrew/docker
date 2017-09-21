@@ -3,10 +3,9 @@
 .PHONY: all clean
 
 all: \
+	linuxbrew/bin/brew \
 	linuxbrew/Cellar/libmagic/5.32/share/misc/magic.mgc \
 	linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/README.md \
-	linuxbrew/Homebrew/bin/brew \
-	linuxbrew/bin/brew \
 	cache/curl-7.55.1.x86_64_linux.bottle.tar.gz \
 	cache/glibc-2.23.x86_64_linux.bottle.tar.gz \
 	cache/openssl--cacert-2017-01-18.pem \
@@ -57,11 +56,9 @@ clean:
 	rm -rf bin cache etc lib lib64 usr
 
 linuxbrew/Homebrew/bin/brew:
-	mkdir -p $(@D)
 	git clone --depth=1 https://github.com/Linuxbrew/brew linuxbrew/Homebrew
 
 linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/README.md:
-	mkdir -p $(@D)
 	git clone --depth=1 https://github.com/Linuxbrew/homebrew-core $(@D)
 
 linuxbrew/bin/brew: linuxbrew/Homebrew/bin/brew
