@@ -19,7 +19,6 @@ RUN brew link libmagic \
 	&& HOMEBREW_NO_AUTO_UPDATE=1 brew install --ignore-dependencies patchelf glibc \
 	&& HOMEBREW_NO_AUTO_UPDATE=1 brew install curl \
 		bash coreutils file-formula gawk gnu-sed gnu-tar gnu-which grep gzip util-linux \
-		binutils gcc linux-headers \
 	&& ln -s bash ~/.linuxbrew/bin/sh \
 	&& brew config
 
