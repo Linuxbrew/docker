@@ -16,9 +16,12 @@ RUN mkdir -m777 /var && mkdir -m1777 /tmp /var/tmp && chown -R 1000:1000 /bin /e
 
 USER linuxbrew
 RUN brew link libmagic \
-	&& HOMEBREW_NO_AUTO_UPDATE=1 brew install glibc curl bash coreutils file-formula gawk gnu-tar gzip \
+	&& HOMEBREW_NO_AUTO_UPDATE=1 brew install --ignore-dependencies patchelf glibc \
+	&& HOMEBREW_NO_AUTO_UPDATE=1 brew install curl \
+		bash coreutils file-formula gawk gnu-sed gnu-tar gnu-which grep gzip util-linux \
+		binutils gcc linux-headers \
 	&& ln -s bash ~/.linuxbrew/bin/sh \
-	&& printf '#!/bin/sh\ntype -P "$@"\n' >~/.linuxbrew/bin/which && chmod +x ~/.linuxbrew/bin/which
+	&& brew config
 
 USER root
 RUN rm -rf /bin /lib && ln -s ~/.linuxbrew/bin /bin && ln -s ~/.linuxbrew/lib /lib
