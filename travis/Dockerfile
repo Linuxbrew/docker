@@ -1,8 +1,11 @@
 FROM quay.io/travisci/travis-ruby:latest
 LABEL maintainer="Bob W. Hogg <rwhogg@linux.com>"
+LABEL name "Linuxbrew/travis"
+LABEL version "1.0"
 
 RUN apt-get -qq update &&\
     apt-get install -y libc6-dbg libxml-parser-perl libxml-sax-perl &&\
+    apt-get clean \
     env DEBIAN_FRONTEND=noninteractive apt-get autoremove -y --purge\
       libblas-dev\
       libbz2-dev\
