@@ -28,6 +28,10 @@ Dockerfiles for using Linuxbrew on various distributions of Linux.
   ```sh
   docker build -t linuxbrew-fedora https://raw.githubusercontent.com/Linuxbrew/docker/master/fedora/
   ```
++ OpenSUSE 42
+  ```sh
+  docker build -t linuxbrew-opensuse https://raw.githubusercontent.com/Linuxbrew/docker/master/opensuse/
+  ```
 + Travis CI
   ```sh
   docker run -it linuxbrew/travis
