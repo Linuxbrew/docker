@@ -1,7 +1,6 @@
 FROM fedora:26
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name "Linuxbrew/fedora"
-LABEL version "1.0"
+LABEL name="Linuxbrew/fedora"
 
 RUN dnf install -y curl git glibc-locale-source make ruby rubygem-json rubygem-test-unit sudo which \
   && dnf clean all \

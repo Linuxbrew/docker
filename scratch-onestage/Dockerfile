@@ -1,7 +1,6 @@
 FROM scratch
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name "Linuxbrew/scratch-onestage"
-LABEL version "1.0"
+LABEL name="Linuxbrew/scratch-onestage"
 
 ENV HOME=/home/linuxbrew LD_LIBRARY_PATH=/lib PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/bin
 

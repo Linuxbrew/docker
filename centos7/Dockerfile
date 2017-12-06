@@ -1,7 +1,6 @@
 FROM centos:7
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name "Linuxbrew/centos7"
-LABEL version "1.0"
+LABEL name="Linuxbrew/centos7"
 
 RUN yum install -y curl make ruby sudo which \
   && yum clean all

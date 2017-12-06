@@ -1,7 +1,6 @@
 FROM ubuntu:trusty
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name "Linuxbrew/trusty"
-LABEL version "1.0"
+LABEL name="Linuxbrew/trusty"
 
 RUN apt-get update \
 	&& apt-get install -y curl file g++ gawk git make sudo uuid-runtime \

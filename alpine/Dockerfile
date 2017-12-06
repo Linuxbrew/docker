@@ -1,7 +1,6 @@
 FROM alpine:3.6
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name "Linuxbrew/alpine"
-LABEL version "1.0"
+LABEL name="Linuxbrew/alpine"
 
 RUN apk update \
 	&& apk --no-cache add bash curl file git libc6-compat make ruby ruby-irb ruby-json ruby-test-unit sudo \

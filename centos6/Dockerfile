@@ -1,7 +1,6 @@
 FROM centos:6
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name "Linuxbrew/centos6"
-LABEL version "1.0"
+LABEL name="Linuxbrew/centos6"
 
 RUN yum install -y curl make sudo which \
   && yum clean all

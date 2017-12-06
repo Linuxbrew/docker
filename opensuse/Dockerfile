@@ -1,5 +1,6 @@
 FROM opensuse:leap
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
+LABEL name="Linuxbrew/opensuse"
 
 RUN zypper --non-interactive install curl git glibc-i18ndata glibc-locale make sudo tar which \
 	&& localedef -i en_US -f UTF-8 en_US.UTF-8 \

@@ -1,7 +1,6 @@
 FROM debian:stretch
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name "Linuxbrew/debian"
-LABEL version "1.0"
+LABEL name="Linuxbrew/debian"
 
 # Set apt in non-interactive mode during the image build
 ARG DEBIAN_FRONTEND=noninteractive

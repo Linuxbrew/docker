@@ -1,7 +1,6 @@
 FROM ubuntu:xenial
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name "Linuxbrew/xenial"
-LABEL version "1.0"
+LABEL name="Linuxbrew/xenial"
 
 RUN apt-get update \
 	&& apt-get install -y curl file g++ git locales make uuid-runtime \
