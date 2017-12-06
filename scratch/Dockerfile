@@ -1,4 +1,4 @@
-FROM linuxbrew/linuxbrew AS base
+FROM linuxbrew/linuxbrew:latest AS base
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 LABEL name="Linuxbrew/scratch"
 
