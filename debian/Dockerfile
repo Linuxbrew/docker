@@ -8,7 +8,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 # Set up UTF-8
 RUN apt-get update && \
     apt-get install -y apt-utils locales && \
-    apg-get clean && \
+    apt-get clean && \
     sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     dpkg-reconfigure locales && \
     update-locale LANG=en_US.UTF-8
