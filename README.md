@@ -8,10 +8,6 @@ Dockerfiles for using Linuxbrew on various distributions of Linux.
   ```sh
   docker run -it linuxbrew/alpine
   ```
-+ CentOS 5
-  ```sh
-  docker build -t linuxbrew-centos5 https://raw.githubusercontent.com/Linuxbrew/docker/master/centos5/
-  ```
 + CentOS 6
   ```sh
   docker build -t linuxbrew-centos6 https://raw.githubusercontent.com/Linuxbrew/docker/master/centos6/
