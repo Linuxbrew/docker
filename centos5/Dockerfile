@@ -5,12 +5,11 @@ LABEL name="Linuxbrew/centos5"
 # Fix yum. CentOS 5 is end-of-life as of 2017-03-31.
 RUN urlgrabber https://gist.github.com/sjackman/132b65c33b62a89c45671e9c605025bc/raw/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo \
 	&& urlgrabber https://gist.github.com/sjackman/132b65c33b62a89c45671e9c605025bc/raw/libselinux.repo /etc/yum.repos.d/libselinux.repo \
-	&& yum install -y curl gcc gcc44 gcc44-c++ make sudo which \
+	&& yum install -y curl gcc gcc44 gcc44-c++ make which \
 	&& yum clean all
 
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8 \
-	&& useradd -m -s /bin/bash linuxbrew \
-	&& echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
+	&& useradd -m -s /bin/bash linuxbrew
 
 USER linuxbrew
 WORKDIR /home/linuxbrew

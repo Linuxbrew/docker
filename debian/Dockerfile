@@ -18,8 +18,7 @@ RUN apt-get update && \
 ENV LANG en_US.UTF-8
 
 # Create a linuxbrew user
-RUN  useradd -m -s /bin/bash linuxbrew \
-     && echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
+RUN  useradd -m -s /bin/bash linuxbrew
 USER linuxbrew
 WORKDIR /home/linuxbrew
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
