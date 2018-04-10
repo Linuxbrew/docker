@@ -36,10 +36,6 @@ Dockerfiles for using Linuxbrew on various distributions of Linux.
   ```sh
   docker run -it linuxbrew/travis
   ```
-+ Ubuntu 12.04 LTS (Precise Pangolin)
-  ```sh
-  docker build -t linuxbrew-precise https://raw.githubusercontent.com/Linuxbrew/docker/master/precise/
-  ```
 + Ubuntu 14.04 LTS (Trusty Tahr)
   ```sh
   docker build -t linuxbrew-trusty https://raw.githubusercontent.com/Linuxbrew/docker/master/trusty/
