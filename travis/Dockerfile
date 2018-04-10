@@ -51,7 +51,6 @@ RUN apt-get -qq update &&\
 
 # Get to the right place
 RUN useradd -ms /bin/bash linuxbrew
-RUN echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
 USER linuxbrew
 WORKDIR /home/linuxbrew
 

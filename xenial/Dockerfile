@@ -10,8 +10,7 @@ RUN apt-get update \
         && rm -rf /var/lib/apt/lists/*
 
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8 \
-	&& useradd -m -s /bin/bash linuxbrew \
-	&& echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
+	&& useradd -m -s /bin/bash linuxbrew
 
 USER linuxbrew
 WORKDIR /home/linuxbrew
