@@ -63,7 +63,6 @@ ENV PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
 ENV HOMEBREW_DEVELOPER=1 HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_VERBOSE=1 HOMEBREW_VERBOSE_USING_DOTS=1
 RUN ulimit -n 1024
 RUN umask 022
-RUN brew tap homebrew/science
 RUN brew tap linuxbrew/xorg
 WORKDIR /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula
 # Fix error: Incorrect file permissions (664)
