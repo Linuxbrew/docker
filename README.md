@@ -1,6 +1,6 @@
 # Linuxbrew Dockerfiles
 
-Linuxbrew Dockerfiles for various distributions of Linux.
+Dockerfiles for using Linuxbrew on various distributions of Linux.
 
 # Base Images
 
