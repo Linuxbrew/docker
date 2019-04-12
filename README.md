@@ -58,3 +58,8 @@ docker build -t linuxbrew-trusty https://raw.githubusercontent.com/Linuxbrew/doc
 ```sh
 docker run -it linuxbrew/linuxbrew
 ```
+
+## Ubuntu 18.04 LTS (Bionic Beaver)
+```sh
+docker run -it linuxbrew/linuxbrew
+```
