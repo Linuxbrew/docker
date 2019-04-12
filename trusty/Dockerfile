@@ -17,7 +17,7 @@ ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 	SHELL=/bin/bash \
 	USER=linuxbrew
 
-RUN git clone https://github.com/Linuxbrew/brew.git /home/linuxbrew/.linuxbrew/Homebrew \
+RUN git clone https://github.com/Homebrew/brew.git /home/linuxbrew/.linuxbrew/Homebrew \
 	&& mkdir /home/linuxbrew/.linuxbrew/bin \
 	&& ln -s ../Homebrew/bin/brew /home/linuxbrew/.linuxbrew/bin/ \
 	&& brew config
