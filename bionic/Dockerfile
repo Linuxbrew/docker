@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name="Linuxbrew/bionic"
+LABEL name="linuxbrew/bionic"
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \

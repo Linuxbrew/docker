@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name="Linuxbrew/trusty"
+LABEL name="linuxbrew/trusty"
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \

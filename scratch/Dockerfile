@@ -1,6 +1,6 @@
 FROM linuxbrew/linuxbrew:latest AS base
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name="Linuxbrew/scratch"
+LABEL name="linuxbrew/scratch"
 
 RUN HOMEBREW_NO_AUTO_UPDATE=1 brew install glibc \
 		bash coreutils curl file-formula findutils gawk git gnu-sed gnu-tar gnu-which grep gzip util-linux \

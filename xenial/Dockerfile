@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name="Linuxbrew/xenial"
+LABEL name="linuxbrew/xenial"
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \

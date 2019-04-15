@@ -1,6 +1,6 @@
 FROM centos:5
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name="Linuxbrew/centos5"
+LABEL name="linuxbrew/centos5"
 
 # Fix yum. CentOS 5 is end-of-life as of 2017-03-31.
 RUN urlgrabber https://gist.github.com/sjackman/132b65c33b62a89c45671e9c605025bc/raw/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo \

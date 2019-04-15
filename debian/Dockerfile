@@ -1,6 +1,6 @@
 FROM debian:stretch
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name="Linuxbrew/debian"
+LABEL name="linuxbrew/debian"
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \

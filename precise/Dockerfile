@@ -1,6 +1,6 @@
 FROM ubuntu:precise
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
-LABEL name="Linuxbrew/precise"
+LABEL name="linuxbrew/precise"
 
 RUN apt-get update \
 	&& apt-get install -y curl file g++ gawk git make sudo uuid-runtime \
