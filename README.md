@@ -61,10 +61,10 @@ docker build -t linuxbrew-trusty https://raw.githubusercontent.com/Linuxbrew/doc
 
 ## Ubuntu 16.04 LTS (Xenial Xerus)
 ```sh
-docker build -t linuxbrew-xenial https://raw.githubusercontent.com/Linuxbrew/docker/master/xenial/Dockerfile
+docker build -t homebrew/brew
 ```
 
 ## Ubuntu 18.04 LTS (Bionic Beaver)
 ```sh
-docker run -it linuxbrew/brew
+docker build -t linuxbrew-bionic https://raw.githubusercontent.com/Linuxbrew/docker/master/bionic/Dockerfile
 ```
