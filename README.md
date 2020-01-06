@@ -69,5 +69,5 @@ docker run -it homebrew/brew
 
 ## Ubuntu 18.04 LTS (Bionic Beaver)
 ```sh
-docker run -it linuxbrew/brew
+docker build -t linuxbrew-bionic https://raw.githubusercontent.com/Linuxbrew/docker/master/bionic/Dockerfile
 ```
