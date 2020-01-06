@@ -1,4 +1,4 @@
-FROM opensuse:leap
+FROM opensuse/leap:15
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 LABEL name="linuxbrew/opensuse"
 

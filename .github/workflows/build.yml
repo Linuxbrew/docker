@@ -1,0 +1,19 @@
+name: Docker builds
+
+on: [pull_request]
+
+env:
+  DOCKER_TARGET: docker.pkg.github.com/linuxbrew
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [alpine, centos/8, centos/7, centos/6, centos/5, debian, fedora, opensuse, ubuntu/bionic, ubuntu/trusty, ubuntu/precise]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build ${{ matrix.os }}
+        if: success()
+        run: docker build -t ${{ env.DOCKER_TARGET }}/${{ matrix.os }}:latest -f ${{ matrix.os }}/Dockerfile .
