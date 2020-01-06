@@ -60,8 +60,11 @@ docker build -t linuxbrew-trusty https://raw.githubusercontent.com/Linuxbrew/doc
 ```
 
 ## Ubuntu 16.04 LTS (Xenial Xerus)
+
+The source for this image is in the [Homebrew/brew](https://github.com/Homebrew/brew/blob/master/Dockerfile) repository.
+
 ```sh
-docker build -t linuxbrew-xenial https://raw.githubusercontent.com/Linuxbrew/docker/master/xenial/Dockerfile
+docker run -it homebrew/brew
 ```
 
 ## Ubuntu 18.04 LTS (Bionic Beaver)
