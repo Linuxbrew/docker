@@ -24,6 +24,11 @@ docker build -t linuxbrew-centos6 https://raw.githubusercontent.com/Linuxbrew/do
 docker build -t linuxbrew-centos7 https://raw.githubusercontent.com/Linuxbrew/docker/master/centos7/Dockerfile
 ```
 
+## CentOS 8
+```sh
+docker build -t linuxbrew-centos8 https://raw.githubusercontent.com/Linuxbrew/docker/master/centos8/Dockerfile
+```
+
 ## Debian 9 (Stretch)
 ```sh
 docker run -it linuxbrew/debian
@@ -56,10 +61,10 @@ docker build -t linuxbrew-trusty https://raw.githubusercontent.com/Linuxbrew/doc
 
 ## Ubuntu 16.04 LTS (Xenial Xerus)
 ```sh
-docker run -it linuxbrew/linuxbrew
+docker build -t linuxbrew-xenial https://raw.githubusercontent.com/Linuxbrew/docker/master/xenial/Dockerfile
 ```
 
 ## Ubuntu 18.04 LTS (Bionic Beaver)
 ```sh
-docker run -it linuxbrew/linuxbrew
+docker run -it linuxbrew/brew
 ```
