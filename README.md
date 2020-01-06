@@ -26,7 +26,7 @@ docker build -t linuxbrew-centos7 https://raw.githubusercontent.com/Linuxbrew/do
 
 ## CentOS 8
 ```sh
-docker build -t linuxbrew-centos7 https://raw.githubusercontent.com/Linuxbrew/docker/master/centos8/Dockerfile
+docker build -t linuxbrew-centos8 https://raw.githubusercontent.com/Linuxbrew/docker/master/centos8/Dockerfile
 ```
 
 ## Debian 9 (Stretch)
