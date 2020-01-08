@@ -31,7 +31,12 @@ docker build -t linuxbrew-centos8 https://raw.githubusercontent.com/Linuxbrew/do
 
 ## Debian 9 (Stretch)
 ```sh
-docker run -it linuxbrew/debian
+docker run -it linuxbrew/debian9
+```
+
+## Debian 10 (Buster)
+```sh
+docker run -it linuxbrew/debian10
 ```
 
 ## Fedora 28
