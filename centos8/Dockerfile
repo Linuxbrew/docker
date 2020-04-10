@@ -2,7 +2,7 @@ FROM centos:8
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 LABEL name="linuxbrew/centos8"
 
-RUN yum install -y git curl file make ruby sudo which glibc-locale-source glibc-langpack-en \
+RUN yum install -y curl file git glibc-langpack-en glibc-locale-source make ruby sudo which \
   && yum clean all
 
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8 \
