@@ -2,7 +2,7 @@ FROM centos:6
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 LABEL name="linuxbrew/centos6"
 
-RUN yum install -y curl make sudo which \
+RUN yum install -y curl git make sudo which \
   && yum clean all
 
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8 \
