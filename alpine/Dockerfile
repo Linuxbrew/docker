@@ -7,11 +7,13 @@ RUN apk update \
 	&& adduser -D -s /bin/bash linuxbrew \
 	&& echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers \
 	&& ln -s /bin/touch /usr/bin/touch
+
 USER linuxbrew
 WORKDIR /home/linuxbrew
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 	SHELL=/bin/bash \
 	USER=linuxbrew
+
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 	&& HOMEBREW_NO_ANALYTICS=1 brew install -s patchelf \
 	&& HOMEBREW_NO_ANALYTICS=1 brew install --ignore-dependencies binutils gmp isl@0.18 libmpc linux-headers mpfr zlib \
@@ -21,4 +23,5 @@ RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/instal
 	&& HOMEBREW_NO_ANALYTICS=1 brew remove patchelf \
 	&& HOMEBREW_NO_ANALYTICS=1 brew install -s patchelf \
 	&& HOMEBREW_NO_ANALYTICS=1 brew config
+
 CMD ["/bin/bash"]
