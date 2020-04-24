@@ -2,7 +2,7 @@ FROM fedora:31
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 LABEL name="linuxbrew/fedora"
 
-RUN dnf install -y curl file gcc git glibc-locale-source make ruby rubygem-json rubygem-test-unit sudo which \
+RUN dnf install -y curl file git glibc-locale-source make ruby rubygem-json rubygem-test-unit sudo which \
 	&& dnf clean all \
 	&& localedef -i en_US -f UTF-8 en_US.UTF-8 \
 	&& useradd -m -s /bin/bash linuxbrew \
