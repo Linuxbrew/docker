@@ -4,13 +4,13 @@ LABEL name="linuxbrew/scratch-onestage"
 
 ENV HOME=/home/linuxbrew LD_LIBRARY_PATH=/lib PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/bin
 
-ADD linuxbrew $HOME/.linuxbrew
-ADD cache $HOME/.cache/Homebrew
-ADD etc/passwd etc/
-ADD bin /bin/
-ADD lib /lib/
-ADD lib64 /lib64/
-ADD usr /usr/
+COPY linuxbrew $HOME/.linuxbrew
+COPY cache $HOME/.cache/Homebrew
+COPY etc/passwd etc/
+COPY bin /bin/
+COPY lib /lib/
+COPY lib64 /lib64/
+COPY usr /usr/
 ADD cache/portable-ruby-2.0.0-p648.x86_64_linux.bottle.tar.gz $HOME/.linuxbrew/Homebrew/Library/Homebrew/vendor/
 
 RUN mkdir -m777 /var && mkdir -m1777 /tmp /var/tmp && chown -R 1000:1000 /bin /etc /lib /lib64 /home /usr /var
