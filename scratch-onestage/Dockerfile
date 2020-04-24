@@ -24,6 +24,7 @@ RUN brew link libmagic \
 	&& brew config
 
 USER root
+# hadolint ignore=SC2114
 RUN rm -rf /bin /lib && ln -s ~/.linuxbrew/bin /bin && ln -s ~/.linuxbrew/lib /lib
 
 USER linuxbrew
