@@ -56,6 +56,7 @@ RUN useradd -ms /bin/bash linuxbrew
 RUN echo 'linuxbrew ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
 USER linuxbrew
 WORKDIR /home/linuxbrew
+SHELL /bin/bash
 
 # Install Linuxbrew
 RUN git clone --depth=1 https://github.com/Linuxbrew/brew .linuxbrew/Homebrew
@@ -68,4 +69,4 @@ RUN umask 022
 RUN brew tap linuxbrew/xorg
 WORKDIR /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula
 # Fix error: Incorrect file permissions (664)
-RUN chmod 0644 *.rb
+RUN chmod 0644 -- *.rb
