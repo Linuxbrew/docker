@@ -1,3 +1,4 @@
+# hadolint ignore=DL3007
 FROM quay.io/travisci/travis-ruby:latest
 LABEL maintainer="Bob W. Hogg <rwhogg@linux.com>"
 LABEL name="linuxbrew/travis"
