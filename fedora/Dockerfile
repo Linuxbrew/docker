@@ -11,9 +11,9 @@ RUN dnf install -y curl file git glibc-locale-source make ruby rubygem-json ruby
 USER linuxbrew
 WORKDIR /home/linuxbrew
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
-	SHELL=/bin/bash \
 	USER=linuxbrew
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" \
 	&& brew config
 
