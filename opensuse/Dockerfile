@@ -11,8 +11,9 @@ RUN zypper --non-interactive install curl git glibc-i18ndata glibc-locale make s
 USER linuxbrew
 WORKDIR /home/linuxbrew
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
-    SHELL=/bin/bash \
 	USER=linuxbrew
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" \
 	&& brew config
