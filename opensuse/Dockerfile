@@ -1,3 +1,4 @@
+# hadolint ignore=DL3007
 FROM opensuse/tumbleweed:latest
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 LABEL name="linuxbrew/opensuse"
