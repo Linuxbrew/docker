@@ -1,4 +1,4 @@
-FROM fedora:28
+FROM fedora:31
 LABEL maintainer="Shaun Jackman <sjackman@gmail.com>"
 LABEL name="linuxbrew/fedora"
 
@@ -14,7 +14,7 @@ ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH \
 	SHELL=/bin/bash \
 	USER=linuxbrew
 
-RUN yes | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)" \
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" \
 	&& brew config
 
 CMD ["/bin/bash"]
