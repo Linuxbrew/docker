@@ -39,7 +39,7 @@ docker run -it linuxbrew/debian9
 docker run -it linuxbrew/debian10
 ```
 
-## Fedora 28
+## Fedora 31
 ```sh
 docker build -t linuxbrew-fedora https://raw.githubusercontent.com/Linuxbrew/docker/master/fedora/Dockerfile
 ```
