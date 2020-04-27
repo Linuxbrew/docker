@@ -76,3 +76,8 @@ docker run -it homebrew/brew
 ```sh
 docker build -t linuxbrew-bionic https://raw.githubusercontent.com/Linuxbrew/docker/master/bionic/Dockerfile
 ```
+
+## Ubuntu 20.04 LTS (Focal Fossa)
+```sh
+docker build -t linuxbrew-focal https://raw.githubusercontent.com/Linuxbrew/docker/master/focal/Dockerfile
+```
