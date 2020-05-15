@@ -2,7 +2,7 @@ name: Lint all Dockerfiles
 on: [push, pull_request]
 jobs:
   lint:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: brew install hadolint
