@@ -61,18 +61,24 @@ docker build -t linuxbrew-trusty https://raw.githubusercontent.com/Linuxbrew/doc
 
 ## Ubuntu 16.04 LTS (Xenial Xerus)
 
-The source for this image is in the [Homebrew/brew](https://github.com/Homebrew/brew/blob/master/Dockerfile) repository.
-
 ```sh
-docker run -it homebrew/brew
+docker run -it homebrew/ubuntu16.04
 ```
+
+[Dockerfile](https://github.com/Homebrew/brew/blob/master/Dockerfile)
 
 ## Ubuntu 18.04 LTS (Bionic Beaver)
+
 ```sh
-docker build -t linuxbrew-bionic https://raw.githubusercontent.com/Linuxbrew/docker/master/bionic/Dockerfile
+docker run -it homebrew/ubuntu18.04
 ```
 
+[Dockerfile](https://github.com/Homebrew/brew/blob/master/Dockerfile)
+
 ## Ubuntu 20.04 LTS (Focal Fossa)
+
 ```sh
-docker build -t linuxbrew-focal https://raw.githubusercontent.com/Linuxbrew/docker/master/focal/Dockerfile
+docker run -it homebrew/ubuntu20.04
 ```
+
+[Dockerfile](https://github.com/Homebrew/brew/blob/master/Dockerfile)
