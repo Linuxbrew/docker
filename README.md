@@ -29,6 +29,8 @@ docker build -t linuxbrew-centos8 https://raw.githubusercontent.com/Linuxbrew/do
 docker run -it homebrew/debian7
 ```
 
+[Dockerfile](https://github.com/Homebrew/homebrew-linux-dev/blob/master/Dockerfile)
+
 ## Debian 8 (Jessie)
 ```sh
 docker build -t linuxbrew-debian8 https://raw.githubusercontent.com/Linuxbrew/docker/master/debian8/Dockerfile
